@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './app/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+  ],
   theme: {
     extend: {
       colors: {
@@ -73,13 +77,6 @@ export default {
         md: '0 2px 4px rgba(0, 0, 0, 0.04)',
         lg: '0 4px 8px rgba(0, 0, 0, 0.06)',
         xl: '0 8px 16px rgba(0, 0, 0, 0.08)',
-      },
-      transitionDuration: {
-        200: '200ms',
-        300: '300ms',
-      },
-      transitionTimingFunction: {
-        smooth: 'cubic-bezier(0.4, 0, 0.2, 1)',
       },
     },
   },
