@@ -90,15 +90,15 @@ export const AuthPage: React.FC = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-50 to-accent/10 flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen bg-neutral-bg-primary flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-md">
         {/* Logo */}
-        <div className="text-center mb-8">
-          <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-primary-800 to-accent flex items-center justify-center text-white font-bold text-3xl mx-auto mb-4">
+        <div className="text-center mb-10">
+          <div className="w-14 h-14 rounded-md bg-primary-800 flex items-center justify-center text-white font-serif text-2xl mx-auto mb-6">
             M
           </div>
-          <h1 className="text-3xl font-bold text-primary-800">Message Study</h1>
-          <p className="text-neutral-text-secondary mt-2">Premium Study Tool</p>
+          <h1 className="text-4xl font-serif font-semibold text-neutral-text mb-2">Message Study</h1>
+          <p className="text-sm text-neutral-text-muted tracking-wide">PREMIUM ACADEMIC INTERFACE</p>
         </div>
 
         {/* Card */}

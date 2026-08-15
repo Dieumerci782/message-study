@@ -1,0 +1,11 @@
+import { jsx as _jsx, jsxs as _jsxs, Fragment as _Fragment } from "react/jsx-runtime";
+import { useState } from 'react';
+import { SearchBox, Card, CardBody, Badge } from '@/components';
+import { useUIStore } from '@/store/uiStore';
+export const SearchPage = () => {
+    const { setCurrentPage } = useUIStore();
+    const [query, setQuery] = useState('');
+    const [results] = useState([]);
+    return (_jsxs("div", { className: "container-normal py-8 px-4 md:px-0", children: [_jsx("div", { className: "mb-8", children: _jsx(SearchBox, { onSearch: setQuery }) }), query && (_jsxs(_Fragment, { children: [_jsx("h2", { className: "text-2xl font-bold text-primary-800 mb-2", children: "R\u00E9sultats de recherche" }), _jsxs("p", { className: "text-sm text-neutral-text-secondary mb-6", children: [results.length, " r\u00E9sultats pour \"", query, "\""] })] })), results.length === 0 && query && (_jsxs("div", { className: "text-center py-12", children: [_jsx("p", { className: "text-neutral-text-secondary mb-4", children: "Aucun r\u00E9sultat trouv\u00E9" }), _jsx("p", { className: "text-sm text-neutral-text-muted", children: "Essayez une autre recherche" })] })), _jsx("div", { className: "space-y-4", children: results.map((result, i) => (_jsx(Card, { hover: true, className: "cursor-pointer", onClick: () => setCurrentPage('citation'), children: _jsxs(CardBody, { className: "space-y-3", children: [_jsxs("div", { className: "flex items-start gap-3", children: [_jsx(Badge, { children: result.category }), _jsxs("div", { className: "flex-1", children: [_jsx("h3", { className: "font-semibold text-primary-800 mb-1", children: result.title }), _jsx("p", { className: "text-sm text-neutral-text-secondary line-clamp-2", children: result.excerpt })] })] }), _jsxs("div", { className: "flex gap-4 text-xs text-neutral-text-muted", children: [_jsxs("span", { children: ["Ref: ", result.reference] }), _jsxs("span", { children: ["Pertinence: ", result.relevance, "%"] })] })] }) }, i))) })] }));
+};
+//# sourceMappingURL=SearchPage.js.map
